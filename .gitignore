@@ -1,0 +1,23 @@
+# Large / generated artifacts
+outputs/
+checkpoints/
+wandb/
+eval_logs/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.mp4
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets
+.env
+*.token
+hf_token*
+.netrc
+
+# Local agent/tooling files (not part of the project)
+CLAUDE.md
+.claude/

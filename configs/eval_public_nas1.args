@@ -1,0 +1,14 @@
+# Phase 2: public fully fine-tuned SmolVLA on LIBERO-Spatial, paper protocol, n_action_steps=1
+# (draft: flag names to be verified with 'lerobot-eval --help' on the pinned lerobot 0.7.0)
+--policy.path=HuggingFaceVLA/smolvla_libero
+--env.type=libero
+--env.task=libero_spatial
+# 10 episodes per task x 10 tasks = 100 episodes (paper Sec 4.1: "10 trials per task")
+--eval.n_episodes=10
+# batch = episodes per task (LeRobot LIBERO docs, fair-comparison guidance)
+--eval.batch_size=10
+# re-plan after this many executed actions (paper default in sim = 1, chunk size = 50)
+--policy.n_action_steps=1
+--seed=1000
+--env.init_states=true
+--env.hard_reset=true
